@@ -1,4 +1,4 @@
-<p align="center">Handler原理及相关知识点</p>
+<p align="center"># Handler原理及相关知识点</p>
 #### 它的使用场景是把任务切换到需要的线程去执行，一般常用场景是更新UI，在ViewRootImpl类中做了当前线程是否是主线程的处理，所以无法在子线程中更新UI。因为UI控件不是线程安全的，多线程操作会使UI控件处于不可预期的情况，线程不安全的处理方式是对UI控件进行加锁操作，但加锁的缺点是会让UI的访问逻辑变得复杂并降低了访问效率并会阻塞某些线程的执行。
 #### ViewRootImpl是一个视图层次结构的顶部，实现了View与WindowManager之间的协议，它的创建是在WindowManagerLobal.addview时创建的。
 
